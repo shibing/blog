@@ -4,3 +4,9 @@ node_js:
 
 before_install:
     npm install -g hexo-cli
+
+install:
+    npm install
+
+script:
+    hexo generate
