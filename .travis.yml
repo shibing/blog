@@ -14,7 +14,7 @@ env:
     secure: jrkm5wGbQKHyDAfy9l2dyV5rOcH6/cuesGFHL5f/HOy14AQi5aBUBTln13OvodT5Kuxg3WpLNFeHG8Y/n+JyZbtGLvX9y6b3MeuAHF7zlvkXVvFzJ6FnTMp/bssinD3UGJgSlksUuSjqkwxhRoIHJoTBTm3uf8r3VDdpOvN6NG0X0r0vlzPAcN/fWwRUkarK4b/UX/K4h/9ZyFj8WBz08g8GIqmCHIzjIK9bG7DU/oKWnVSsrzBEdvuVIND0n8ta3yGQgxlr4xpoKH1ALKi8zyW/M5eLV8/B2YWa9LmUoABJAmCQwrnhNftIF9lwxamEZXfJ2Kw1jwfHnrSwIQ2cC9wkovhfMBhXlhZ1GOxYgvI4CWuph1hRW1PIaYjVmFO26BpsnAY8sHYCvod6jMTqYTwlQZXQ+5LG3ddZ2XaxTah9It7yyj/yhRM/UgaELUvkD760NkyaBdzEgBG/EK/Vpee4FyLtoN08MYtV821SfHPgwiBzPPELXi1TcPXXyZqcVU+KqJLxNXawTdqqtxCYh8F46U6BiX0eIx2tjpM1j64eoCXMT5X1gPjcQeBT/59gmiy/9MelCZZ8PgcX4D73PumjLYAG16mBRDvWLlEvbJ/l/zfPCdJMMTspXtU0lK08fPk86Htu6EKn632e+gaCvBi841bY+DqxHcoImidM15Y=
 
 after_success: 
-  git config --global user.name shibing 
-  git config --global user.email shibing.sw@139.com 
+  git config --global user.name shibing
+  git config --global user.email shibing.sw@139.com
   sed -i'' "/^ *repo/s~github\.com~${GH_TOKEN}@github.com~" _config.yml
   hexo deploy
