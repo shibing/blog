@@ -7,7 +7,9 @@ before_install: npm install -g hexo-cli
 
 install: npm install
 
-script: hexo generate
+script: 
+    hexo clean
+    hexo generate
 
 env:
   global:
