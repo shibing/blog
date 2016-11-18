@@ -1,5 +1,5 @@
 ---
-title: nginx的延迟关闭_lingering_close
+title: nginx的延迟关闭
 date: 2016-11-18 20:04:53
 tags: 
     - Nginx
@@ -158,7 +158,7 @@ ngx_http_set_lingering_close(ngx_http_request_t *r)
     }
 }
 ```
-```ngx_http_set_lingering_close``` 函数就是用过来设置延迟关闭函数的，关键的部分已经加了注释。可以看到 ```Nginx``` 主要通过 ```lingering_time``` 和 ```lingering_timeout``` 这两个参数来控制延迟关闭的时间，```lingering_time``` 表示总的延迟时间，```lingering_timeout``` 表示单次延迟时间。上面的这段代码会向 ```Nginx``` 的事件循环注册一个超时时间，超时的时间间隔是 ```lingering_timeout``` ，超时事件的处理函数是 ```ngx_http_lingering_close_handler```，就是说一旦延迟时间到了，该函数就会被调用，它的主要内容如下：
+`ngx_http_set_lingering_close` 函数就是用过来设置延迟关闭函数的，关键的部分已经加了注释。可以看到 `Nginx` 主要通过 `lingering_time` 和 `lingering_timeout` 这两个参数来控制延迟关闭的时间，`lingering_time` 表示总的延迟时间，`lingering_timeout` 表示单次延迟时间。上面的这段代码会向 `Nginx` 的事件循环注册一个超时时间，超时的时间间隔是 `lingering_timeout` ，超时事件的处理函数是 `ngx_http_lingering_close_handler`，就是说一旦延迟时间到了，该函数就会被调用，它的主要内容如下：
 
 ```
 ngx_http_lingering_close_handler(ngx_event_t *rev)
