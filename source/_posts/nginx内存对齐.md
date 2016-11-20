@@ -2,8 +2,8 @@
 title: nginx内存对齐
 date: 2016-09-30 21:50:57
 tags:
-    - Nginx
-    - C
+    - nginx
+    - c
 ---
 
 最近在看`Nginx`的源代码，阅读其有关内存池实现的时候发现下面一段代码

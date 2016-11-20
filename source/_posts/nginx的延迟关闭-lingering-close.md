@@ -2,9 +2,9 @@
 title: nginx的延迟关闭
 date: 2016-11-18 20:04:53
 tags: 
-    - Nginx
-    - C
-    - Linux
+    - nginx
+    - c
+    - linux
 ---
 
 # 背景
