@@ -4,3 +4,5 @@ db.json
 node_modules/
 public/
 .deploy*/
+.DS_Store
+source/.DS_Store
